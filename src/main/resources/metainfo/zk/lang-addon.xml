@@ -10,7 +10,7 @@
     </version>
 
     <component>
-        <component-name>i</component-name>
+        <component-name>zkfontawesome</component-name>
         <component-class>com.quane.zk.zkfontawesome.I</component-class>
         <widget-class>zul.zkfontawesome.ZKFontAwesome</widget-class>
         <mold>
