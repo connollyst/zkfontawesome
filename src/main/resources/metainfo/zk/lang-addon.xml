@@ -10,13 +10,13 @@
     </version>
 
     <component>
-        <component-name>zkfontawesome</component-name>
-        <component-class>com.quane.zk.zkfontawesome.I</component-class>
-        <widget-class>zul.zkfontawesome.ZKFontAwesome</widget-class>
+        <component-name>fontawesome</component-name>
+        <component-class>com.quane.zk.zkfontawesome.FontAwesome</component-class>
+        <widget-class>zul.zkfontawesome.FontAwesome</widget-class>
         <mold>
             <mold-name>default</mold-name>
             <mold-uri>mold/zkfontawesome.js</mold-uri>
-            <css-uri>css/zkfontawesome.css.dsp</css-uri>
+            <css-uri>fontawesome/v321/css/font-awesome.css</css-uri>
         </mold>
     </component>
 </language-addon>

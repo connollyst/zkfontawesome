@@ -1,1 +1,0 @@
-zul.zkfontawesome.ZKFontAwesome = zk.$extends(zk.Widget, {}, {});

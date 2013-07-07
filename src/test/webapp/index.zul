@@ -1,4 +1,4 @@
 <zk>
     <label value="hello world"/>
-    <zkfontawesome/>
+    <fontawesome/>
 </zk>
