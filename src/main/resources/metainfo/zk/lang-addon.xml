@@ -1,0 +1,22 @@
+<language-addon>
+    <addon-name>zkfontawesome</addon-name>
+    <depends>zul</depends>
+    <language-name>xul/html</language-name>
+
+    <version>
+        <version-class>com.quane.zk.zkfontawesome.Version</version-class>
+        <version-uid>1.0</version-uid>
+        <zk-version>5.0.5</zk-version><!-- or later -->
+    </version>
+
+    <component>
+        <component-name>i</component-name>
+        <component-class>com.quane.zk.zkfontawesome.I</component-class>
+        <widget-class>zul.zkfontawesome.layout.ZKFontAwesome</widget-class>
+        <mold>
+            <mold-name>default</mold-name>
+            <mold-uri>mold/zkfontawesome.js</mold-uri>
+            <css-uri>css/zkfontawesome.css.dsp</css-uri>
+        </mold>
+    </component>
+</language-addon>
