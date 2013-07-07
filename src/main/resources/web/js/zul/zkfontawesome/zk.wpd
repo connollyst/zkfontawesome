@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="zul.zkfontawesome" language="xul/html">
+    <widget name="ZKFontAwesome"/>
+</package>
