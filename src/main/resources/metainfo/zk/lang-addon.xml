@@ -16,7 +16,7 @@
         <mold>
             <mold-name>default</mold-name>
             <mold-uri>mold/zkfontawesome.js</mold-uri>
-            <css-uri>fontawesome/v321/css/font-awesome.css</css-uri>
+            <css-uri>fontawesome/v321/font-awesome.css</css-uri>
         </mold>
     </component>
 </language-addon>
