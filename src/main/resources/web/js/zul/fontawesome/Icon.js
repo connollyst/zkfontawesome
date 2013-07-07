@@ -1,0 +1,1 @@
+zul.fontawesome.Icon = zk.$extends(zk.Widget, {}, {});

@@ -4,19 +4,19 @@
     <language-name>xul/html</language-name>
 
     <version>
-        <version-class>com.quane.zk.zkfontawesome.Version</version-class>
+        <version-class>org.zkoss.fontawesome.Version</version-class>
         <version-uid>1.0</version-uid>
         <zk-version>5.0.5</zk-version><!-- or later -->
     </version>
 
     <component>
-        <component-name>fontawesome</component-name>
-        <component-class>com.quane.zk.zkfontawesome.FontAwesome</component-class>
-        <widget-class>zul.zkfontawesome.FontAwesome</widget-class>
+        <component-name>icon</component-name>
+        <component-class>org.zkoss.fontawesome.Icon</component-class>
+        <widget-class>zul.fontawesome.Icon</widget-class>
         <mold>
             <mold-name>default</mold-name>
             <mold-uri>mold/zkfontawesome.js</mold-uri>
-            <css-uri>fontawesome/v321/font-awesome.css</css-uri>
+            <css-uri>css/v321/font-awesome.min.css</css-uri>
         </mold>
     </component>
 </language-addon>

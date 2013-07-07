@@ -1,4 +1,4 @@
-package com.quane.zk.zkfontawesome;
+package org.zkoss.fontawesome;
 
 /**
  * The version of the language addon.<br/>
