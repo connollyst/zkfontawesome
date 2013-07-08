@@ -27,4 +27,79 @@
             <icon type="icon-compass" sclass="dunno"/>
         </listcell>
     </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" size="normal"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="normal" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="normal" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="normal" sclass="dunno"/>
+        </listcell>
+    </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" size="large"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="large" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="large" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="large" sclass="dunno"/>
+        </listcell>
+    </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" size="2x"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="2x" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="2x" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="2x" sclass="dunno"/>
+        </listcell>
+    </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" size="3x"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="3x" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="3x" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon size="3x" type="icon-compass" sclass="dunno"/>
+        </listcell>
+    </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" size="4x"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="4x" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="4x" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" size="4x" sclass="dunno"/>
+        </listcell>
+    </listitem>
 </listbox>
