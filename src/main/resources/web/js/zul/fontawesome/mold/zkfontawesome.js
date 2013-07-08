@@ -1,5 +1,5 @@
 function (out) {
 
-    out.push('<i class="icon-camera-retro"></i>');
+    out.push('<i ', this.domAttrs_(), '></i>');
 
 }

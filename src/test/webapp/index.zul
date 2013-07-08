@@ -1,4 +1,30 @@
-<zk>
-    <label value="hello world"/>
-    <icon/>
-</zk>
+<listbox>
+    <listitem>
+        <listcell>
+            <icon/>
+        </listcell>
+        <listcell>
+            <icon style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon style="color:red" sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon sclass="dunno"/>
+        </listcell>
+    </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" style="color:red" sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" sclass="dunno"/>
+        </listcell>
+    </listitem>
+</listbox>
