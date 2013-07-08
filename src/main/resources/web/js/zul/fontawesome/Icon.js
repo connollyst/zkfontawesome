@@ -2,10 +2,12 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
 
     _defaultType: 'icon-thumbs-up',
     _defaultSize: 'normal',
+    _defaultPull: 'none',
 
     _type: 'icon-thumbs-up',
     _size: 'normal',
     _muted: false,
+    _pull: 'none',
 
     getType: function () {
         return this._type;
@@ -46,6 +48,20 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
         }
     },
 
+    getPull: function () {
+        return this._pull;
+    },
+
+    setPull: function (pull) {
+        if (!pull) {
+            pull = this._defaultPull;
+        }
+        if (this._pull != pull) {
+            this._pull = pull;
+            if (this.desktop) this.$n().className = this.domClass_();
+        }
+    },
+
     domClass_: function (no) {
         var classes = this.$supers("domClass_", no) || '';
         if (classes) {
@@ -58,7 +74,8 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
     _fontawesomeClasses: function () {
         return   this._type + ' ' +
             this._fontawesomeSize() + ' ' +
-            this._fontawesomeMuted();
+            this._fontawesomeMuted() + ' ' +
+            this._fontawesomePull();
     },
 
     _fontawesomeSize: function () {
@@ -72,6 +89,19 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
 
     _fontawesomeMuted: function () {
         return this._muted ? 'icon-muted' : '';
+    },
+
+    _fontawesomePull: function () {
+        switch (this._pull.toLowerCase()) {
+            case 'none':
+                return '';
+            case 'left':
+                return 'pull-left';
+            case 'right':
+                return 'pull-right';
+            default:
+                zk.error('Invalid FontAwesome pull: "' + this._pull + '"');
+        }
     }
 
 }, {
