@@ -26,9 +26,7 @@ public class Icon extends XulElement {
 	}
 
 	public void setType(String type) {
-		if (type == null) {
-			type = DEFAULT_TYPE;
-		}
+		type = cleanOrDefault(type, DEFAULT_TYPE);
 		if (!this.type.equals(type)) {
 			this.type = type;
 			smartUpdate("type", this.type);
@@ -40,9 +38,7 @@ public class Icon extends XulElement {
 	}
 
 	public void setSize(String size) {
-		if (size == null) {
-			size = DEFAULT_SIZE;
-		}
+		size = cleanOrDefault(size, DEFAULT_SIZE);
 		if (!this.size.equals(size)) {
 			this.size = size;
 			smartUpdate("size", this.size);
@@ -86,11 +82,8 @@ public class Icon extends XulElement {
 	 *             if the string does not translate
 	 */
 	public void setPull(String pull) {
-		if (pull == null) {
-			setPull(IconPull.NONE);
-		} else {
-			setPull(IconPull.valueOf(pull.trim().toUpperCase()));
-		}
+		pull = cleanOrDefault(pull, IconPull.NONE.name());
+		setPull(IconPull.valueOf(pull.toUpperCase()));
 	}
 
 	public boolean getMuted() {
@@ -133,4 +126,10 @@ public class Icon extends XulElement {
 		render(renderer, "border", border);
 	}
 
+	private String cleanOrDefault(String value, String defaultValue) {
+		if (value == null || value.trim().isEmpty()) {
+			value = defaultValue;
+		}
+		return value.trim();
+	}
 }
