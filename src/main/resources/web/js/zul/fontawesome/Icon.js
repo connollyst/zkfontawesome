@@ -5,6 +5,7 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
 
     _type: 'icon-thumbs-up',
     _size: 'normal',
+    _muted: false,
 
     getType: function () {
         return this._type;
@@ -34,17 +35,30 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
         }
     },
 
+    getMuted: function () {
+        return this._muted;
+    },
+
+    setMuted: function (muted) {
+        if (this._muted != muted) {
+            this._muted = muted;
+            if (this.desktop) this.$n().className = this.domClass_();
+        }
+    },
+
     domClass_: function (no) {
         var classes = this.$supers("domClass_", no) || '';
         if (classes) {
             classes += ' ';
         }
-        classes += this.fontawesomeClasses_();
-        return classes;
+        classes += this._fontawesomeClasses();
+        return classes.trim();
     },
 
-    fontawesomeClasses_: function () {
-        return   this._type + ' ' + this._fontawesomeSize();
+    _fontawesomeClasses: function () {
+        return   this._type + ' ' +
+            this._fontawesomeSize() + ' ' +
+            this._fontawesomeMuted();
     },
 
     _fontawesomeSize: function () {
@@ -54,6 +68,10 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
             default:
                 return 'icon-' + this._size;
         }
+    },
+
+    _fontawesomeMuted: function () {
+        return this._muted ? 'icon-muted' : '';
     }
 
 }, {

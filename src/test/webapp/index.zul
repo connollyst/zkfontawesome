@@ -102,4 +102,19 @@
             <icon type="icon-compass" size="4x" sclass="dunno"/>
         </listcell>
     </listitem>
+    <listitem>
+        <listcell>
+            <icon type="icon-compass" muted="true" size="4x"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" muted="true" size="4x" style="color:red"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" muted="true" size="4x" style="color:red"
+                  sclass="dunno"/>
+        </listcell>
+        <listcell>
+            <icon type="icon-compass" muted="true" size="4x" sclass="dunno"/>
+        </listcell>
+    </listitem>
 </listbox>
