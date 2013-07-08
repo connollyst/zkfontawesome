@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.quane.zk</groupId>
+    <groupId>org.zkoss</groupId>
     <artifactId>zkfontawesome</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <name>ZK FontAwesome</name>
     <description>A ZK wrapper for Font Awesome.</description>
 
@@ -52,8 +52,7 @@
     </dependencies>
 
     <build>
-        <testOutputDirectory>${project.build.directory}/classes
-        </testOutputDirectory>
+        <testOutputDirectory>${project.build.directory}/classes</testOutputDirectory>
         <plugins>
             <!-- Run with Jetty -->
             <plugin>
@@ -64,31 +63,9 @@
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                     <stopKey>foo</stopKey>
                     <stopPort>9999</stopPort>
-                    <webAppSourceDirectory>${basedir}/src/test/webapp
-                    </webAppSourceDirectory>
-                    <classesDirectory>${basedir}/target/classes
-                    </classesDirectory>
+                    <webAppSourceDirectory>${basedir}/src/test/webapp</webAppSourceDirectory>
+                    <classesDirectory>${basedir}/target/classes</classesDirectory>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>start-jetty</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <scanIntervalSeconds>0</scanIntervalSeconds>
-                            <daemon>true</daemon>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>stop-jetty</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>stop</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <!-- Compress javascript -->
             <plugin>
