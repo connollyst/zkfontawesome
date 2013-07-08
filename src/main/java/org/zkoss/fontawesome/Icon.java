@@ -19,6 +19,7 @@ public class Icon extends XulElement {
 	private String size = DEFAULT_SIZE;
 	private IconPull pull = IconPull.NONE;
 	private boolean muted = false;
+	private boolean border = false;
 
 	public String getType() {
 		return type;
@@ -46,21 +47,6 @@ public class Icon extends XulElement {
 			this.size = size;
 			smartUpdate("size", this.size);
 		}
-	}
-
-	public boolean getMuted() {
-		return muted;
-	}
-
-	public void setMuted(boolean muted) {
-		if (this.muted != muted) {
-			this.muted = muted;
-			smartUpdate("muted", this.muted);
-		}
-	}
-
-	public void setMuted(String muted) {
-		setMuted(Boolean.valueOf(muted));
 	}
 
 	/**
@@ -107,13 +93,44 @@ public class Icon extends XulElement {
 		}
 	}
 
+	public boolean getMuted() {
+		return muted;
+	}
+
+	public void setMuted(boolean muted) {
+		if (this.muted != muted) {
+			this.muted = muted;
+			smartUpdate("muted", this.muted);
+		}
+	}
+
+	public void setMuted(String muted) {
+		setMuted(Boolean.valueOf(muted));
+	}
+
+	public boolean getBorder() {
+		return border;
+	}
+
+	public void setBorder(boolean border) {
+		if (this.border != border) {
+			this.border = border;
+			smartUpdate("border", this.border);
+		}
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
 	protected void renderProperties(ContentRenderer renderer)
 			throws IOException {
 		super.renderProperties(renderer);
 		render(renderer, "type", type);
 		render(renderer, "size", size);
-		render(renderer, "muted", muted);
 		render(renderer, "pull", pull);
+		render(renderer, "muted", muted);
+		render(renderer, "border", border);
 	}
 
 }

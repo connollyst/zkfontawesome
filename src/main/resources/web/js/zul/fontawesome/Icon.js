@@ -6,8 +6,9 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
 
     _type: 'icon-thumbs-up',
     _size: 'normal',
-    _muted: false,
     _pull: 'none',
+    _muted: false,
+    _border: false,
 
     getType: function () {
         return this._type;
@@ -37,6 +38,20 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
         }
     },
 
+    getPull: function () {
+        return this._pull;
+    },
+
+    setPull: function (pull) {
+        if (!pull) {
+            pull = this._defaultPull;
+        }
+        if (this._pull != pull) {
+            this._pull = pull;
+            if (this.desktop) this.$n().className = this.domClass_();
+        }
+    },
+
     getMuted: function () {
         return this._muted;
     },
@@ -48,16 +63,13 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
         }
     },
 
-    getPull: function () {
-        return this._pull;
+    getBorder: function () {
+        return this._border;
     },
 
-    setPull: function (pull) {
-        if (!pull) {
-            pull = this._defaultPull;
-        }
-        if (this._pull != pull) {
-            this._pull = pull;
+    setBorder: function (border) {
+        if (this._border != border) {
+            this._border = border;
             if (this.desktop) this.$n().className = this.domClass_();
         }
     },
@@ -74,8 +86,9 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
     _fontawesomeClasses: function () {
         return   this._type + ' ' +
             this._fontawesomeSize() + ' ' +
+            this._fontawesomePull() + ' ' +
             this._fontawesomeMuted() + ' ' +
-            this._fontawesomePull();
+            this._fontawesomeBorder();
     },
 
     _fontawesomeSize: function () {
@@ -87,9 +100,6 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
         }
     },
 
-    _fontawesomeMuted: function () {
-        return this._muted ? 'icon-muted' : '';
-    },
 
     _fontawesomePull: function () {
         switch (this._pull.toLowerCase()) {
@@ -102,6 +112,14 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
             default:
                 zk.error('Invalid FontAwesome pull: "' + this._pull + '"');
         }
+    },
+
+    _fontawesomeMuted: function () {
+        return this._muted ? 'icon-muted' : '';
+    },
+
+    _fontawesomeBorder: function () {
+        return this._border ? 'icon-border' : '';
     }
 
 }, {
