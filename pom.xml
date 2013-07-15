@@ -10,6 +10,29 @@
     <name>ZK FontAwesome</name>
     <description>A ZK wrapper for Font Awesome.</description>
 
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://opensource.org/licenses/mit-license.html</url>
+            <comments>The ZK Font Awesome wrapper code is provided uner the MIT License</comments>
+        </license>
+        <license>
+            <name>SIL OFL 1.1</name>
+            <url>http://scripts.sil.org/OFL</url>
+            <comments>The Font Awesome font is licensed under the SIL OFL 1.1</comments>
+        </license>
+        <license>
+            <name>MIT</name>
+            <url>http://opensource.org/licenses/mit-license.html</url>
+            <comments>Font Awesome CSS, LESS, and SASS files are licensed under the MIT License</comments>
+        </license>
+        <license>
+            <name>CC BY 3.0</name>
+            <url>http://creativecommons.org/licenses/by/3.0/</url>
+            <comments>The Font Awesome documentation is licensed under the CC BY 3.0 License</comments>
+        </license>
+    </licenses>
+
     <properties>
         <zk.version>5.0.10</zk.version>
         <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
@@ -112,93 +135,10 @@
                         <configuration>
                             <encoding>UTF-8</encoding>
                             <charset>UTF-8</charset>
-                            <reportOutputDirectory>
-                                ${project.basedir}/target/javadoc
-                            </reportOutputDirectory>
-                            <destDir>zkfontawesome</destDir>
-                            <show>protected</show>
                         </configuration>
                         <goals>
                             <goal>javadoc</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- Pack zips -->
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2</version>
-                <executions>
-                    <!-- Build sources.jar -->
-                    <execution>
-                        <id>sources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>assembly/sources.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                    </execution>
-                    <!-- Build javadoc.jar -->
-                    <execution>
-                        <id>javadoc</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>assembly/javadoc.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                    </execution>
-                    <!-- Build bin.zip -->
-                    <execution>
-                        <id>bin</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>${project.artifactId}-bin${packname}
-                            </finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptors>
-                                <descriptor>assembly/bin.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                    </execution>
-                    <!-- Build src.zip -->
-                    <execution>
-                        <id>src</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>${project.artifactId}-src${packname}
-                            </finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptors>
-                                <descriptor>assembly/src.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                    </execution>
-                    <!-- Build bundle.jar -->
-                    <execution>
-                        <id>bundle</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>assembly/bundle.xml</descriptor>
-                            </descriptors>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
