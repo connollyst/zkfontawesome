@@ -86,12 +86,15 @@
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>
+                https://oss.sonatype.org/content/repositories/snapshots
+            </url>
         </snapshotRepository>
         <repository>
             <id>sonatype-nexus-staging</id>
             <name>Sonatype Nexus release repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/
+            <url>
+                https://oss.sonatype.org/service/local/staging/deploy/maven2
             </url>
         </repository>
     </distributionManagement>
@@ -117,7 +120,8 @@
     </dependencies>
 
     <build>
-        <testOutputDirectory>${project.build.directory}/classes
+        <testOutputDirectory>
+            ${project.build.directory}/classes
         </testOutputDirectory>
         <plugins>
             <!-- Compress javascript -->
@@ -190,9 +194,11 @@
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                     <stopKey>foo</stopKey>
                     <stopPort>9999</stopPort>
-                    <webAppSourceDirectory>${basedir}/src/test/webapp
+                    <webAppSourceDirectory>
+                        ${basedir}/src/test/webapp
                     </webAppSourceDirectory>
-                    <classesDirectory>${basedir}/target/classes
+                    <classesDirectory>
+                        ${basedir}/target/classes
                     </classesDirectory>
                 </configuration>
             </plugin>
