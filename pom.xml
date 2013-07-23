@@ -9,10 +9,12 @@
 
     <name>ZK FontAwesome</name>
     <description>A ZK wrapper for Font Awesome.</description>
+    <url>https://github.com/connollyst/zkfontawesome</url>
 
     <scm>
         <url>https://github.com/connollyst/zkfontawesome</url>
-        <connection>scm:git:git://github.com/connollyst/zkfontawesome.git
+        <connection>
+            scm:git:git://github.com/connollyst/zkfontawesome.git
         </connection>
         <developerConnection>
             scm:git:git@github.com:connollyst/zkfontawesome.git
