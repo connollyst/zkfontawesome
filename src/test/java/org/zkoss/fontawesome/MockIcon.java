@@ -1,5 +1,6 @@
 package org.zkoss.fontawesome;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class MockIcon extends Icon {
 
-	private List<String> attributesUpdated;
+	private List<String> attributesUpdated = new ArrayList<String>();
 
 	public void clearSmartUpdates() {
 		attributesUpdated.clear();
@@ -17,7 +18,7 @@ public class MockIcon extends Icon {
 
 	@Override
 	protected void smartUpdate(String attr, Object value) {
-		super.smartUpdate(attr, value);
+		attributesUpdated.add(attr);
 	}
 
 	public boolean wasSmartUpdated(String attr) {

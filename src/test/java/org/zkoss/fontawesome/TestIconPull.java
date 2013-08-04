@@ -1,6 +1,6 @@
 package org.zkoss.fontawesome;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -193,6 +193,90 @@ public class TestIconPull {
 	@Test
 	public void testPullNoneByTextLowerWithPadding() {
 		assertPullNone("  none  ");
+	}
+
+	/* Test smart update */
+
+	@Test
+	public void testNoSmartUpdateOnConstruction() {
+		MockIcon icon = new MockIcon();
+		assertFalse(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testNoSmartUpdateOnChangeToNoneFromDefault() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.NONE);
+		// The default should be NONE, so no update needed
+		assertFalse(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToLeftFromDefault() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.LEFT);
+		assertTrue(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToRightFromDefault() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.RIGHT);
+		assertTrue(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testNoSmartUpdateOnChangeToNoneFromNone() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.NONE);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.NONE);
+		assertFalse(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToNoneFromLeft() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.LEFT);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.NONE);
+		assertTrue(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToNoneFromRight() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.RIGHT);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.NONE);
+		assertTrue(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToLeftFromNone() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.NONE);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.LEFT);
+		assertTrue(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testNoSmartUpdateOnChangeToLeftFromLeft() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.LEFT);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.LEFT);
+		assertFalse(icon.wasSmartUpdated("pull"));
+	}
+
+	@Test
+	public void testSmartUpdateOnChangeToLeftFromRight() {
+		MockIcon icon = new MockIcon();
+		icon.setPull(IconPull.RIGHT);
+		icon.clearSmartUpdates();
+		icon.setPull(IconPull.LEFT);
+		assertTrue(icon.wasSmartUpdated("pull"));
 	}
 
 	private void assertPullRight(String givenPull) {
