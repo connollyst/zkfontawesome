@@ -44,37 +44,6 @@ You now have a new ZK component `icon`..
 <icon type="icon-smile"/>
 ```
 
-Which should behave much as you expect..
-
-```xml
-<zk>
-    <vlayout>
-        <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
-            <icon type="icon-smile"/>
-        </a>
-        <icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
-    <vlayout>
-</zk>
-```
-
-Of course, these icons can be manipulated with CSS..
-
-```xml
-<zk>
-    <style>
-        .github-link {
-            color: #000;
-        }
-        .github-link:hover {
-            color: #4183C4;
-        }
-    </style>
-    <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
-        <icon type="icon-github" style="text-decoration:underline"/>
-    </a>
-</zk>
-```
-
 ##Supported Attributes
 Font Awesome supports a number of ways to modify the icon further..
 
@@ -91,10 +60,12 @@ Draw an icon larger than normal..
 ####Border
 Draws a border around the icon for emphasis..
 
-    <icon type="icon-smile" border="true"/>
+```xml
+<icon type="icon-smile" border="true"/>
+```
 
 ####Pull
-Pull an icon to the left or right of surrounding text..
+Pull an icon to the `left` or `right` of surrounding text..
 
 ```xml
 <icon type="icon-quote-left" pull="left"/>
@@ -123,3 +94,39 @@ quoteIcon.setParent(window);
 ```
 
 Cool huh?
+
+##Examples
+These icons should behave much like any other component in ZK.
+
+####Links & Text
+```xml
+<vlayout>
+    <a href="http://fortawesome.github.io/Font-Awesome/">
+        <icon type="icon-double-angle-right">
+            Goto Font Awesome
+        </icon>
+    </a>
+<vlayout>
+```
+
+####ZK Events
+```xml
+<icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
+```
+
+####CSS Styling
+```xml
+<zk>
+    <style>
+        .github-link {
+            color: #000;
+        }
+        .github-link:hover {
+            color: #4183C4;
+        }
+    </style>
+    <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
+        <icon type="icon-github" style="text-decoration:underline"/>
+    </a>
+</zk>
+```
