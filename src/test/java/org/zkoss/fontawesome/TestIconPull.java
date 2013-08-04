@@ -2,62 +2,27 @@ package org.zkoss.fontawesome;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 /**
- * Test cases for {@link Icon}.
+ * Test cases for {@link Icon#setPull(IconPull)}.
  *
  * @author Sean Connolly
  */
-public class TestIcon {
+public class TestIconPull {
+
+	@Rule
+	public ExpectedException exception = ExpectedException.none();
 
 	@Test
-	public void testType() {
+	public void testSizeErrorIfInvalid() {
 		Icon icon = new Icon();
-		icon.setType("some-type");
-		assertEquals("some-type", icon.getType());
-	}
-
-	@Test
-	public void testTypeDefaultWithNullString() {
-		Icon icon = new Icon();
-		icon.setType(null);
-		assertEquals("icon-thumbs-up", icon.getType());
-	}
-
-	@Test
-	public void testTypeDefaultWithEmptyString() {
-		Icon icon = new Icon();
-		icon.setType(" ");
-		assertEquals("icon-thumbs-up", icon.getType());
-	}
-
-	@Test
-	public void testTypeDefaultWithWhitespaceString() {
-		Icon icon = new Icon();
-		icon.setType("    \t    \n    ");
-		assertEquals("icon-thumbs-up", icon.getType());
-	}
-
-	@Test
-	public void testTypeWithLeadingWhitespace() {
-		Icon icon = new Icon();
-		icon.setType("  some-type");
-		assertEquals("some-type", icon.getType());
-	}
-
-	@Test
-	public void testTypeWithTrailingWhitespace() {
-		Icon icon = new Icon();
-		icon.setType("some-type  ");
-		assertEquals("some-type", icon.getType());
-	}
-
-	@Test
-	public void testTypeWithSurroundingWhitespace() {
-		Icon icon = new Icon();
-		icon.setType("  some-type  ");
-		assertEquals("some-type", icon.getType());
+		String pull = "wrong";
+		exception.expect(IllegalArgumentException.class);
+		exception.expectMessage("'wrong' is not a valid icon pull.");
+		icon.setPull(pull);
 	}
 
 	@Test
@@ -74,6 +39,30 @@ public class TestIcon {
 		String pull = null;
 		icon.setPull(pull);
 		assertEquals(IconPull.NONE, icon.getPull());
+	}
+
+	@Test
+	public void testPullNone() {
+		Icon icon = new Icon();
+		IconPull pull = IconPull.NONE;
+		icon.setPull(pull);
+		assertEquals(pull, icon.getPull());
+	}
+
+	@Test
+	public void testPullLeft() {
+		Icon icon = new Icon();
+		IconPull pull = IconPull.LEFT;
+		icon.setPull(pull);
+		assertEquals(pull, icon.getPull());
+	}
+
+	@Test
+	public void testPullRight() {
+		Icon icon = new Icon();
+		IconPull pull = IconPull.RIGHT;
+		icon.setPull(pull);
+		assertEquals(pull, icon.getPull());
 	}
 
 	@Test
@@ -223,4 +212,5 @@ public class TestIcon {
 		icon.setPull(givenPull);
 		assertEquals(expectedPull, icon.getPull());
 	}
+
 }
