@@ -120,8 +120,7 @@ These icons should behave much like any other component in ZK.
 ####ZK Events (Client Side)
 ```xml
 <zk xmlns:c="client">
-<icon type="icon-hand-right"
-      c:onClick="this.setType('icon-thumbs-up')"/>
+    <icon type="icon-hand-right" c:onClick="this.setType('icon-thumbs-up')"/>
 </zk>
 ```
 
