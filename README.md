@@ -96,3 +96,13 @@ An icon can be muted to quickly make it lighter without needing to set a CSS
 
     <icon type="icon-smile" muted="true"/>
 
+##Be Java Awesome
+Of course all of this can be done from the Java side also..
+
+
+    Icon quoteIcon = new Icon("icon-quote-left");
+    quoteIcon.setSize(IconSize.LARGE);
+    quoteIcon.setPull(IconPull.LEFT);
+    quoteIcon.setMuted(true);
+    quoteIcon.setBorder(true);
+    quoteIcon.setParent(window);
