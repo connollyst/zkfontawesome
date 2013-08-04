@@ -2,7 +2,8 @@
 ##Introduction
 ZK wrapper for Font Awesome glyphs.
 
-Font Awesome is a project which grew out of Twitter's Bootstrap.
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) is a project
+ which grew out of Twitter's Bootstrap.
 
 In the words of Font Awesome:
 > Font Awesome gives you scalable vector icons that can instantly be customized
@@ -17,8 +18,17 @@ In a nutshell, Font Awesome is a custom font designed by
  footprint of your site by replacing lots of images with a single font file as
  well as giving you much more control over the icons using CSS.
 
-You can find out more about the Font Awesome project
- [here](http://fortawesome.github.io/Font-Awesome/icons/).
-
 The purpose of this ZK add-on, then, is to give you familiar ZK client/server
  control over the Font Awesome icons. Let's get started..
+
+##Get Font Awesome
+    <dependency>
+        <groupId>org.zkoss</groupId>
+        <artifactId>zkfontawesome</artifactId>
+        <version>${zk.fontawesome.version}</version>
+    </dependency>
+You can find the latest version on
+ [mvnrepository.com](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
+
+This will include all the CSS and font files you need and gives you access to
+ the new ZUML and Java objects.
