@@ -23,11 +23,13 @@ The purpose of this ZK add-on, then, is to give you familiar ZK client/server
 
 ##Get Font Awesome
 
-    <dependency>
-        <groupId>org.zkoss</groupId>
-        <artifactId>zkfontawesome</artifactId>
-        <version>${zk.fontawesome.version}</version>
-    </dependency>
+```xml
+<dependency>
+    <groupId>org.zkoss</groupId>
+    <artifactId>zkfontawesome</artifactId>
+    <version>${zk.fontawesome.version}</version>
+</dependency>
+```
 
 You can find the latest version on
  [mvnrepository.com](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
@@ -38,34 +40,40 @@ This will include all the CSS and font files you need and gives you access to
 ##Be Font Awesome
 You now have a new ZK component `icon`..
 
-    <icon type="icon-smile"/>
+```xml
+<icon type="icon-smile"/>
+```
 
 Which should behave much as you expect..
 
-    <zk>
-        <vlayout>
-            <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
-                <icon type="icon-smile"/>
-            </a>
-            <icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
-        <vlayout>
-    </zk>
+```xml
+<zk>
+    <vlayout>
+        <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
+            <icon type="icon-smile"/>
+        </a>
+        <icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
+    <vlayout>
+</zk>
+```
 
 Of course, these icons can be manipulated with CSS..
 
-    <zk>
-        <style>
-            .github-link {
-                color: #000;
-            }
-            .github-link:hover {
-                color: #4183C4;
-            }
-        </style>
-        <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
-            <icon type="icon-github" style="text-decoration:underline"/>
-        </a>
-    </zk>
+```xml
+<zk>
+    <style>
+        .github-link {
+            color: #000;
+        }
+        .github-link:hover {
+            color: #4183C4;
+        }
+    </style>
+    <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
+        <icon type="icon-github" style="text-decoration:underline"/>
+    </a>
+</zk>
+```
 
 ##Be Even Awesomer
 Font Awesome supports a number of ways to modify the icon further..
@@ -73,10 +81,12 @@ Font Awesome supports a number of ways to modify the icon further..
 ###Size
 Draw an icon larger than normal..
 
-    <icon type="icon-smile" size="large"/> <!-- 33% increase -->
-    <icon type="icon-smile" size="2x"/>
-    <icon type="icon-smile" size="3x"/>
-    <icon type="icon-smile" size="4x"/>
+```xml
+<icon type="icon-smile" size="large"/> <!-- 33% increase -->
+<icon type="icon-smile" size="2x"/>
+<icon type="icon-smile" size="3x"/>
+<icon type="icon-smile" size="4x"/>
+```
 
 ###Border
 Draws a border around the icon for emphasis..
@@ -86,9 +96,11 @@ Draws a border around the icon for emphasis..
 ###Pull
 Pull an icon to the left or right of surrounding text..
 
-    <icon type="icon-quote-left" pull="left"/>
-    <label value="That's what she said."/>
-    <icon type="icon-quote-right" pull="right"/>
+```xml
+<icon type="icon-quote-left" pull="left"/>
+<label value="That's what she said."/>
+<icon type="icon-quote-right" pull="right"/>
+```
 
 ###Muting
 An icon can be muted to quickly make it lighter without needing to set a CSS
