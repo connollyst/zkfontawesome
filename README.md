@@ -32,12 +32,12 @@ The purpose of this ZK add-on, then, is to give you familiar ZK client/server
 ```
 
 You can find the latest version on
- [mvnrepository.com](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
+ [mvnrepository](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
 
 This will include all the CSS and font files you need and gives you access to
  the new ZUL and Java objects.
 
-##Be Font Awesome
+##Be Awesome
 You now have a new ZK component `icon`..
 
 ```xml
@@ -75,10 +75,10 @@ Of course, these icons can be manipulated with CSS..
 </zk>
 ```
 
-##Be Even Awesomer
+##Supported Attributes
 Font Awesome supports a number of ways to modify the icon further..
 
-###Size
+####Size
 Draw an icon larger than normal..
 
 ```xml
@@ -88,12 +88,12 @@ Draw an icon larger than normal..
 <icon type="icon-smile" size="4x"/>
 ```
 
-###Border
+####Border
 Draws a border around the icon for emphasis..
 
     <icon type="icon-smile" border="true"/>
 
-###Pull
+####Pull
 Pull an icon to the left or right of surrounding text..
 
 ```xml
@@ -102,17 +102,16 @@ Pull an icon to the left or right of surrounding text..
 <icon type="icon-quote-right" pull="right"/>
 ```
 
-###Muting
-An icon can be muted to quickly make it lighter without needing to set a CSS
+####Muting
+An icon can be 'muted' to quickly make it lighter without needing to set a CSS
  color youself..
 
 ```xml
 <icon type="icon-smile" muted="true"/>
 ```
 
-##Be Java Awesome
+##Java Support
 Of course all of this can be done from the Java side also..
-
 
 ```java
 Icon quoteIcon = new Icon("icon-quote-left");
