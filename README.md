@@ -1,5 +1,5 @@
 #zkfontawesome
-##Introduction
+##What's Font Awesome?
 ZK wrapper for Font Awesome glyphs.
 
 [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) is a project
@@ -33,9 +33,9 @@ You can find the latest version on
  [mvnrepository.com](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
 
 This will include all the CSS and font files you need and gives you access to
- the new ZUML and Java objects.
+ the new ZUL and Java objects.
 
-##Be Awesome
+##Be Font Awesome
 You now have a new ZK component `icon`..
 
     <icon type="icon-smile"/>
@@ -47,8 +47,7 @@ Which should behave much as you expect..
             <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
                 <icon type="icon-smile"/>
             </a>
-            <icon type="icon-thumbs-up"
-                  onClick="alert('Awesome!')"/>
+            <icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
         <vlayout>
     </zk>
 
@@ -63,9 +62,37 @@ Of course, these icons can be manipulated with CSS..
                 color: #4183C4;
             }
         </style>
-        <a href="http://fortawesome.github.io/Font-Awesome/icon/github/"
-           sclass="github-link">
-            <icon type="icon-github"/>
+        <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
+            <icon type="icon-github" style="text-decoration:underline"/>
         </a>
     </zk>
+
+##Be Even Awesomer
+Font Awesome supports a number of ways to modify the icon further..
+
+###Size
+Draw an icon larger than normal..
+
+    <icon type="icon-smile" size="large"/> <!-- 33% increase -->
+    <icon type="icon-smile" size="2x"/>
+    <icon type="icon-smile" size="3x"/>
+    <icon type="icon-smile" size="4x"/>
+
+###Border
+Draws a border around the icon for emphasis..
+
+    <icon type="icon-smile" border="true"/>
+
+###Pull
+Pull an icon to the left or right of surrounding text..
+
+    <icon type="icon-quote-left" pull="left"/>
+    <label value="That's what she said."/>
+    <icon type="icon-quote-right" pull="right"/>
+
+###Muting
+An icon can be muted to quickly make it lighter without needing to set a CSS
+ color youself..
+
+    <icon type="icon-smile" muted="true"/>
 
