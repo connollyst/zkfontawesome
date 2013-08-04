@@ -32,3 +32,35 @@ You can find the latest version on
 
 This will include all the CSS and font files you need and gives you access to
  the new ZUML and Java objects.
+
+##Be Awesome
+You now have a new ZK component `icon`..
+    <icon type="icon-smile"/>
+
+Which should behave much as you expect..
+    <zk>
+        <vlayout>
+            <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
+                <icon type="icon-smile"/>
+            </a>
+            <icon type="icon-thumbs-up"
+                  onClick="alert('Awesome!')"/>
+        <vlayout>
+    </zk>
+
+Of course, these icons can be manipulated with CSS..
+    <zk>
+        <style>
+            .github-link {
+                color: #000;
+            }
+            .github-link:hover {
+                color: #4183C4;
+            }
+        </style>
+        <a href="http://fortawesome.github.io/Font-Awesome/icon/github/"
+           sclass="github-link">
+            <icon type="icon-github"/>
+        </a>
+    </zk>
+
