@@ -94,15 +94,21 @@ Pull an icon to the left or right of surrounding text..
 An icon can be muted to quickly make it lighter without needing to set a CSS
  color youself..
 
-    <icon type="icon-smile" muted="true"/>
+```xml
+<icon type="icon-smile" muted="true"/>
+```
 
 ##Be Java Awesome
 Of course all of this can be done from the Java side also..
 
 
-    Icon quoteIcon = new Icon("icon-quote-left");
-    quoteIcon.setSize(IconSize.LARGE);
-    quoteIcon.setPull(IconPull.LEFT);
-    quoteIcon.setMuted(true);
-    quoteIcon.setBorder(true);
-    quoteIcon.setParent(window);
+```java
+Icon quoteIcon = new Icon("icon-quote-left");
+quoteIcon.setSize(IconSize.LARGE);
+quoteIcon.setPull(IconPull.LEFT);
+quoteIcon.setMuted(true);
+quoteIcon.setBorder(true);
+quoteIcon.setParent(window);
+```
+
+Cool huh?
