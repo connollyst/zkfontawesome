@@ -18,6 +18,7 @@ public class Icon extends XulElement {
 	private static final String DEFAULT_TYPE = "icon-thumbs-up";
 
 	private String type = DEFAULT_TYPE;
+	private String label;
 	private IconSize size = IconSize.NORMAL;
 	private IconPull pull = IconPull.NONE;
 	private boolean muted = false;
@@ -64,6 +65,31 @@ public class Icon extends XulElement {
 		if (!this.type.equals(type)) {
 			this.type = type;
 			smartUpdate("type", this.type);
+		}
+	}
+
+	/**
+	 * Get the icon's label.
+	 *
+	 * @return the label
+	 */
+	public String getLabel() {
+		return label;
+	}
+
+	/**
+	 * Set the icon's label.
+	 *
+	 * @param label
+	 *            the label
+	 */
+	public void setLabel(String label) {
+		System.out.println("Setting label: " + label);
+		this.label = label;
+		if (this.label == null || !this.label.equals(label)) {
+			this.label = label;
+			System.out.println("Smart updating label!");
+			smartUpdate("label", this.label);
 		}
 	}
 
@@ -250,6 +276,7 @@ public class Icon extends XulElement {
 			throws IOException {
 		super.renderProperties(renderer);
 		render(renderer, "type", type);
+		render(renderer, "label", label);
 		render(renderer, "size", size);
 		render(renderer, "pull", pull);
 		render(renderer, "muted", muted);
