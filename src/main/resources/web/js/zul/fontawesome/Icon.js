@@ -10,70 +10,46 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
     _muted: false,
     _border: false,
 
-    getType: function () {
-        return this._type;
-    },
-
-    setType: function (type) {
-        if (!type) {
-            type = this._defaultType;
-        }
-        if (this._type != type) {
-            this._type = type;
+    $define: {
+        type: [
+            function (type) {
+                return !type ? this._defaultType : type;
+            },
+            function () {
+                if (this.desktop) this.$n().className = this.domClass_();
+            }
+        ],
+        size: [
+            function (size) {
+                return !size ? this._defaultSize : size;
+            },
+            function () {
+                if (this.desktop) this.$n().className = this.domClass_();
+            }
+        ],
+        pull: [
+            function (pull) {
+                return !pull ? this._defaultPull : pull;
+            },
+            function () {
+                if (this.desktop) this.$n().className = this.domClass_();
+            }
+        ],
+        muted: function () {
+            if (this.desktop) this.$n().className = this.domClass_();
+        },
+        border: function () {
             if (this.desktop) this.$n().className = this.domClass_();
         }
     },
 
-    getSize: function () {
-        return this._size;
+    // protected //
+    bind_: function () {
+        this.$supers(zul.fontawesome.Icon, 'bind_', arguments);
     },
-
-    setSize: function (size) {
-        if (!size) {
-            size = this._defaultSize;
-        }
-        if (this._size != size) {
-            this._size = size;
-            if (this.desktop) this.$n().className = this.domClass_();
-        }
+    unbind_: function () {
+        this.$supers(zul.fontawesome.Icon, 'unbind_', arguments);
     },
-
-    getPull: function () {
-        return this._pull;
-    },
-
-    setPull: function (pull) {
-        if (!pull) {
-            pull = this._defaultPull;
-        }
-        if (this._pull != pull) {
-            this._pull = pull;
-            if (this.desktop) this.$n().className = this.domClass_();
-        }
-    },
-
-    getMuted: function () {
-        return this._muted;
-    },
-
-    setMuted: function (muted) {
-        if (this._muted != muted) {
-            this._muted = muted;
-            if (this.desktop) this.$n().className = this.domClass_();
-        }
-    },
-
-    getBorder: function () {
-        return this._border;
-    },
-
-    setBorder: function (border) {
-        if (this._border != border) {
-            this._border = border;
-            if (this.desktop) this.$n().className = this.domClass_();
-        }
-    },
-
     domClass_: function (no) {
         var classes = this.$supers("domClass_", no) || '';
         if (classes) {
@@ -99,7 +75,6 @@ zul.fontawesome.Icon = zk.$extends(zk.Widget, {
                 return 'icon-' + this._size;
         }
     },
-
 
     _fontawesomePull: function () {
         switch (this._pull.toLowerCase()) {
