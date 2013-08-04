@@ -102,16 +102,27 @@ These icons should behave much like any other component in ZK.
 ```xml
 <vlayout>
     <a href="http://fortawesome.github.io/Font-Awesome/">
-        <icon type="icon-double-angle-right">
-            Goto Font Awesome
-        </icon>
+        <icon type="icon-double-angle-right"/>
+        <label value="Goto Font Awesome"/>
     </a>
 <vlayout>
 ```
 
-####ZK Events
+####ZK Events (Server Side)
 ```xml
-<icon type="icon-thumbs-up" onClick="alert('Awesome!')"/>
+<icon type="icon-hand-right">
+    <attribute name="onClick">
+       this.setType("icon-thumbs-up");
+    </attribute>
+</icon>
+```
+
+####ZK Events (Client Side)
+```xml
+<zk xmlns:c="client">
+<icon type="icon-hand-right"
+      c:onClick="this.setType('icon-thumbs-up')"/>
+</zk>
 ```
 
 ####CSS Styling
