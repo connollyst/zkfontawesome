@@ -22,11 +22,13 @@ The purpose of this ZK add-on, then, is to give you familiar ZK client/server
  control over the Font Awesome icons. Let's get started..
 
 ##Get Font Awesome
+
     <dependency>
         <groupId>org.zkoss</groupId>
         <artifactId>zkfontawesome</artifactId>
         <version>${zk.fontawesome.version}</version>
     </dependency>
+
 You can find the latest version on
  [mvnrepository.com](http://mvnrepository.com/artifact/org.zkoss/zkfontawesome).
 
@@ -35,9 +37,11 @@ This will include all the CSS and font files you need and gives you access to
 
 ##Be Awesome
 You now have a new ZK component `icon`..
+
     <icon type="icon-smile"/>
 
 Which should behave much as you expect..
+
     <zk>
         <vlayout>
             <a href="http://fortawesome.github.io/Font-Awesome/icon/smile/">
@@ -49,6 +53,7 @@ Which should behave much as you expect..
     </zk>
 
 Of course, these icons can be manipulated with CSS..
+
     <zk>
         <style>
             .github-link {
