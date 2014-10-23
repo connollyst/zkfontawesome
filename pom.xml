@@ -4,7 +4,7 @@
 
     <groupId>org.zkoss</groupId>
     <artifactId>zkfontawesome</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>ZK FontAwesome</name>
@@ -19,7 +19,8 @@
         <developerConnection>
             scm:git:git@github.com:connollyst/zkfontawesome.git
         </developerConnection>
-    </scm>
+      <tag>zkfontawesome-1.0</tag>
+  </scm>
 
     <developers>
         <developer>
