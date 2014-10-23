@@ -41,7 +41,7 @@ This will include all the CSS and font files you need and gives you access to
 You now have a new ZK component `icon`..
 
 ```xml
-<icon type="icon-smile"/>
+<icon type="fa-smile-o"/>
 ```
 
 ##Supported Attributes
@@ -51,41 +51,41 @@ Font Awesome supports a number of ways to modify the icon further..
 Draw an icon larger than normal..
 
 ```xml
-<icon type="icon-smile" size="large"/> <!-- 33% increase -->
-<icon type="icon-smile" size="2x"/>
-<icon type="icon-smile" size="3x"/>
-<icon type="icon-smile" size="4x"/>
+<icon type="fa-smile-o" size="large"/> <!-- 33% increase -->
+<icon type="fa-smile-o" size="2x"/>
+<icon type="fa-smile-o" size="3x"/>
+<icon type="fa-smile-o" size="4x"/>
 ```
 
 ####Border
 Draws a border around the icon for emphasis..
 
 ```xml
-<icon type="icon-smile" border="true"/>
+<icon type="fa-smile-o" border="true"/>
 ```
 
 ####Pull
 Pull an icon to the `left` or `right` of surrounding text..
 
 ```xml
-<icon type="icon-quote-left" pull="left"/>
+<icon type="fa-quote-left" pull="left"/>
 <label value="That's what she said."/>
-<icon type="icon-quote-right" pull="right"/>
+<icon type="fa-quote-right" pull="right"/>
 ```
 
 ####Muting
 An icon can be 'muted' to quickly make it lighter without needing to set a CSS
- color youself..
+ color yourself..
 
 ```xml
-<icon type="icon-smile" muted="true"/>
+<icon type="fa-smile-o" muted="true"/>
 ```
 
 ##Java Support
 Of course all of this can be done from the Java side also..
 
 ```java
-Icon quoteIcon = new Icon("icon-quote-left");
+Icon quoteIcon = new Icon("fa-quote-left");
 quoteIcon.setSize(IconSize.LARGE);
 quoteIcon.setPull(IconPull.LEFT);
 quoteIcon.setMuted(true);
@@ -102,7 +102,7 @@ These icons should behave much like any other component in ZK.
 ```xml
 <vlayout>
     <a href="http://fortawesome.github.io/Font-Awesome/">
-        <icon type="icon-double-angle-right"/>
+        <icon type="fa-angle-double-right"/>
         <label value="Goto Font Awesome"/>
     </a>
 <vlayout>
@@ -110,9 +110,9 @@ These icons should behave much like any other component in ZK.
 
 ####ZK Events (Server Side)
 ```xml
-<icon type="icon-hand-right">
+<icon type="fa-hand-o-right">
     <attribute name="onClick">
-       this.setType("icon-thumbs-up");
+       this.setType("fa-thumbs-up");
     </attribute>
 </icon>
 ```
@@ -120,7 +120,7 @@ These icons should behave much like any other component in ZK.
 ####ZK Events (Client Side)
 ```xml
 <zk xmlns:c="client">
-    <icon type="icon-hand-right" c:onClick="this.setType('icon-thumbs-up')"/>
+    <icon type="fa-hand-o-right" c:onClick="this.setType('fa-thumbs-up')"/>
 </zk>
 ```
 
@@ -136,7 +136,7 @@ These icons should behave much like any other component in ZK.
         }
     </style>
     <a sclass="github-link" href="http://fortawesome.github.io/Font-Awesome/icon/github/">
-        <icon type="icon-github" style="text-decoration:underline"/>
+        <icon type="fa-github" style="text-decoration:underline"/>
     </a>
 </zk>
 ```
