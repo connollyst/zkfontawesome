@@ -15,7 +15,7 @@ import org.zkoss.zul.impl.XulElement;
  */
 public class Icon extends XulElement {
 
-	private static final String DEFAULT_TYPE = "icon-thumbs-up";
+	private static final String DEFAULT_TYPE = "fa-thumbs-up";
 
 	private String type = DEFAULT_TYPE;
 	private IconSize size = IconSize.NORMAL;

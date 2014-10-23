@@ -13,7 +13,7 @@ import org.junit.Test;
 public class TestIconType {
 
 	private String FAKE_TYPE = "fake-type";
-	private String DEFAULT_TYPE = "icon-thumbs-up";
+	private String DEFAULT_TYPE = "fa-thumbs-up";
 
 	@Test
 	public void testType() {

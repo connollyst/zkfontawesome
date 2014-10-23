@@ -10,23 +10,23 @@
     </style>
     <a sclass="github-link"
        href="http://fortawesome.github.io/Font-Awesome/icon/github/">
-        <icon type="icon-github" style="text-decoration:underline"/>
+        <icon type="fa-github" style="text-decoration:underline"/>
     </a>
     <label value="Example 2"/>
     <a href="http://fortawesome.github.io/Font-Awesome/">
-        <icon type="icon-double-angle-right"/>
+        <icon type="fa-angle-double-right"/>
         <label value="Goto Font Awesome"/>
     </a>
     <label value="Example 3"/>
-    <icon id="i" type="icon-hand-right">
+    <icon id="i" type="fa-hand-o-right">
         <attribute name="onClick">
-            i.setType("icon-thumbs-up");
+            i.setType("fa-thumbs-up");
         </attribute>
     </icon>
     <label value="Example 4"/>
     <div xmlns:c="client">
-        <icon type="icon-hand-right"
-              c:onClick="this.setType('icon-thumbs-up')"/>
+        <icon type="fa-hand-o-right"
+              c:onClick="this.setType('fa-thumbs-up')"/>
     </div>
     <label value="Proving Grounds"/>
     <listbox>
@@ -46,161 +46,161 @@
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass"/>
+                <icon type="fa-compass"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" style="color:red"/>
+                <icon type="fa-compass" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" style="color:red" sclass="dunno"/>
+                <icon type="fa-compass" style="color:red" sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" sclass="dunno"/>
+                <icon type="fa-compass" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" size="normal"/>
+                <icon type="fa-compass" size="normal"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="normal" style="color:red"/>
+                <icon type="fa-compass" size="normal" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="normal" style="color:red"
+                <icon type="fa-compass" size="normal" style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="normal" sclass="dunno"/>
+                <icon type="fa-compass" size="normal" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" size="large"/>
+                <icon type="fa-compass" size="large"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="large" style="color:red"/>
+                <icon type="fa-compass" size="large" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="large" style="color:red"
+                <icon type="fa-compass" size="large" style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="large" sclass="dunno"/>
+                <icon type="fa-compass" size="large" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" size="2x"/>
+                <icon type="fa-compass" size="2x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="2x" style="color:red"/>
+                <icon type="fa-compass" size="2x" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="2x" style="color:red"
+                <icon type="fa-compass" size="2x" style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="2x" sclass="dunno"/>
+                <icon type="fa-compass" size="2x" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" size="3x"/>
+                <icon type="fa-compass" size="3x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="3x" style="color:red"/>
+                <icon type="fa-compass" size="3x" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="3x" style="color:red"
+                <icon type="fa-compass" size="3x" style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon size="3x" type="icon-compass" sclass="dunno"/>
+                <icon size="3x" type="fa-compass" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" size="4x"/>
+                <icon type="fa-compass" size="4x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="4x" style="color:red"/>
+                <icon type="fa-compass" size="4x" style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="4x" style="color:red"
+                <icon type="fa-compass" size="4x" style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" size="4x" sclass="dunno"/>
+                <icon type="fa-compass" size="4x" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" muted="true" size="4x"/>
+                <icon type="fa-compass" muted="true" size="4x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" muted="true" size="4x"
+                <icon type="fa-compass" muted="true" size="4x"
                       style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" muted="true" size="4x"
+                <icon type="fa-compass" muted="true" size="4x"
                       style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" muted="true" size="4x"
+                <icon type="fa-compass" muted="true" size="4x"
                       sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" pull="left" size="4x"/>
+                <icon type="fa-compass" pull="left" size="4x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="left" size="4x"
+                <icon type="fa-compass" pull="left" size="4x"
                       style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="left" size="4x"
+                <icon type="fa-compass" pull="left" size="4x"
                       style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="left" size="4x" sclass="dunno"/>
+                <icon type="fa-compass" pull="left" size="4x" sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" pull="right" size="4x"/>
+                <icon type="fa-compass" pull="right" size="4x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="right" size="4x"
+                <icon type="fa-compass" pull="right" size="4x"
                       style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="right" size="4x"
+                <icon type="fa-compass" pull="right" size="4x"
                       style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" pull="right" size="4x"
+                <icon type="fa-compass" pull="right" size="4x"
                       sclass="dunno"/>
             </listcell>
         </listitem>
         <listitem>
             <listcell>
-                <icon type="icon-compass" border="true" size="4x"/>
+                <icon type="fa-compass" border="true" size="4x"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" border="true" size="4x"
+                <icon type="fa-compass" border="true" size="4x"
                       style="color:red"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" border="true" size="4x"
+                <icon type="fa-compass" border="true" size="4x"
                       style="color:red"
                       sclass="dunno"/>
             </listcell>
             <listcell>
-                <icon type="icon-compass" border="true" size="4x"
+                <icon type="fa-compass" border="true" size="4x"
                       sclass="dunno"/>
             </listcell>
         </listitem>

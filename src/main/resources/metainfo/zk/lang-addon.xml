@@ -5,7 +5,7 @@
 
     <version>
         <version-class>org.zkoss.fontawesome.Version</version-class>
-        <version-uid>1.0</version-uid>
+        <version-uid>1.1</version-uid>
         <zk-version>5.0.5</zk-version><!-- or later -->
     </version>
 
@@ -16,7 +16,7 @@
         <mold>
             <mold-name>default</mold-name>
             <mold-uri>mold/zkfontawesome.js</mold-uri>
-            <css-uri>css/v321/font-awesome.min.css</css-uri>
+            <css-uri>css/v420/font-awesome.min.css</css-uri>
         </mold>
     </component>
 </language-addon>
