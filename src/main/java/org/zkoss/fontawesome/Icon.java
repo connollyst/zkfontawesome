@@ -6,7 +6,7 @@ import org.zkoss.zk.ui.sys.ContentRenderer;
 import org.zkoss.zul.impl.XulElement;
 
 /**
- * A <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon.<br/>
+ * A <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon.<br>
  * The type of icon to render is specified by the {@link #setType(String)}. The
  * comprehensive list of {@code types} can be found on the original project's
  * website <a href="http://fortawesome.github.io/Font-Awesome/icons/">here</a>.
@@ -30,9 +30,9 @@ public class Icon extends XulElement {
 	}
 
 	/**
-	 * Construct a Font Awesome icon of the given {@code type}.<br/>
+	 * Construct a Font Awesome icon of the given {@code type}.<br>
 	 * Refer to the original project for <a
-	 * href="http://fortawesome.github.io/Font-Awesome/icons/"></a>valid
+	 * href="http://fortawesome.github.io/Font-Awesome/icons/">valid
 	 * types</a>.
 	 *
 	 * @param type
@@ -52,7 +52,7 @@ public class Icon extends XulElement {
 	}
 
 	/**
-	 * Set the type of icon to display.<br/>
+	 * Set the type of icon to display.<br>
 	 * Refer to the Font Awesome documentation for a list of <a
 	 * href="http://fortawesome.github.io/Font-Awesome/icons/">icon types</a>.
 	 *
@@ -78,7 +78,7 @@ public class Icon extends XulElement {
 
 	/**
 	 * Set the icon size. Valid values are {@code "normal"}, {@code "large"},
-	 * {@code "2x"}, {@code "3x"}, and {@code "4x"}<br/>
+	 * {@code "2x"}, {@code "3x"}, and {@code "4x"}<br>
 	 * Note: this setter is tolerant to leading and trailing whitespace and is
 	 * case invariant. However, best practices (and performance) would favor
 	 * using {@link #setSize(IconSize)} instead.
@@ -112,7 +112,7 @@ public class Icon extends XulElement {
 	}
 
 	/**
-	 * Set the icon size.<br/>
+	 * Set the icon size.<br>
 	 * <p>
 	 * Refer to the Font Awesome documentation on <a href=
 	 * "http://fortawesome.github.io/Font-Awesome/examples/#larger-icons"
@@ -163,7 +163,7 @@ public class Icon extends XulElement {
 	}
 
 	/**
-	 * Get the icon pull: to the left, right, or none.<br/>
+	 * Get the icon pull: to the left, right, or none.<br>
 	 * Note: this setter is tolerant to leading and trailing whitespace and is
 	 * case invariant. However, best practices (and performance) would favor
 	 * using {@link #setPull(IconPull)} instead.
@@ -225,7 +225,7 @@ public class Icon extends XulElement {
 	}
 
 	/**
-	 * Set the border state of the icon, on or off.<br/>
+	 * Set the border state of the icon, on or off.<br>
 	 * <p>
 	 * Refer to the Font Awesome documentation on <a href=
 	 * "http://fortawesome.github.io/Font-Awesome/examples/#bordered-pulled"
