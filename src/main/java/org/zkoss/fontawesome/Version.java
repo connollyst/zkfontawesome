@@ -8,6 +8,6 @@ package org.zkoss.fontawesome;
  */
 public class Version {
 
-	public static final String UID = "1.1";
+	public static final String UID = "1.2";
 
 }
