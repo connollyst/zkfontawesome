@@ -1,5 +1,7 @@
-#zkfontawesome
-##What's Font Awesome?
+# zkfontawesome
+
+## What's Font Awesome?
+
 ZK wrapper for Font Awesome glyphs.
 
 [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) is a project
@@ -21,7 +23,7 @@ In a nutshell, Font Awesome is a custom font designed by
 The purpose of this ZK add-on, then, is to give you familiar ZK client/server
  control over the Font Awesome icons. Let's get started..
 
-##Get Font Awesome
+## Get Font Awesome
 
 ```xml
 <dependency>
@@ -37,17 +39,20 @@ You can find the latest version on
 This will include all the CSS and font files you need and gives you access to
  the new ZUL and Java objects.
 
-##Be Awesome
+## Be Awesome
+
 You now have a new ZK component `icon`..
 
 ```xml
 <icon type="fa-smile-o"/>
 ```
 
-##Supported Attributes
+## Supported Attributes
+
 Font Awesome supports a number of ways to modify the icon further..
 
-####Size
+#### Size
+
 Draw an icon larger than normal..
 
 ```xml
@@ -57,14 +62,16 @@ Draw an icon larger than normal..
 <icon type="fa-smile-o" size="4x"/>
 ```
 
-####Border
+#### Border
+
 Draws a border around the icon for emphasis..
 
 ```xml
 <icon type="fa-smile-o" border="true"/>
 ```
 
-####Pull
+#### Pull
+
 Pull an icon to the `left` or `right` of surrounding text..
 
 ```xml
@@ -73,7 +80,8 @@ Pull an icon to the `left` or `right` of surrounding text..
 <icon type="fa-quote-right" pull="right"/>
 ```
 
-####Muting
+#### Muting
+
 An icon can be 'muted' to quickly make it lighter without needing to set a CSS
  color yourself..
 
@@ -81,7 +89,8 @@ An icon can be 'muted' to quickly make it lighter without needing to set a CSS
 <icon type="fa-smile-o" muted="true"/>
 ```
 
-##Java Support
+## Java Support
+
 Of course all of this can be done from the Java side also..
 
 ```java
@@ -95,10 +104,12 @@ quoteIcon.setParent(window);
 
 Cool huh?
 
-##Examples
+## Examples
+
 These icons should behave much like any other component in ZK.
 
-####Links & Text
+#### Links & Text
+
 ```xml
 <vlayout>
     <a href="http://fortawesome.github.io/Font-Awesome/">
@@ -108,7 +119,8 @@ These icons should behave much like any other component in ZK.
 <vlayout>
 ```
 
-####ZK Events (Server Side)
+#### ZK Events (Server Side)
+
 ```xml
 <icon type="fa-hand-o-right">
     <attribute name="onClick">
@@ -117,14 +129,16 @@ These icons should behave much like any other component in ZK.
 </icon>
 ```
 
-####ZK Events (Client Side)
+#### ZK Events (Client Side)
+
 ```xml
 <zk xmlns:c="client">
     <icon type="fa-hand-o-right" c:onClick="this.setType('fa-thumbs-up')"/>
 </zk>
 ```
 
-####CSS Styling
+#### CSS Styling
+
 ```xml
 <zk>
     <style>
